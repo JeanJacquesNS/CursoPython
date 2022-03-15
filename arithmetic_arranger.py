@@ -1,26 +1,26 @@
 def arithmetic_arranger (problems):
 	lista=""
+	numeradores=' '
+	bases=' '
+	linhas=' '
+	
+	padding = ' '
+	t = 8
 	for problem in problems:
-		splited= problem.split("+")
+		splited= problem.split(' ')
 		arranged= splited
-		print(arranged[0],"\n","+",arranged[1])
-		print("====================================")
-		linha=""
 		tamanho=0
-		if len(arranged[0])>len(arranged[1]):
-			for i in range(0,(len(arranged[0])-len(arranged[1]))+4):
-				x=" ";
-				arranged[1]=x+arranged[1]
-			tamanho=len(arranged[1])
-		else:		
-				for i in range(0,(len(arranged[1])-len(arranged[0]))+4):
-					x=" ";
-					arranged[0]=x+arranged[0]
-				tamanho=len(arranged[0])
-		for i in range (2,tamanho):
-			linha+="-"
-		print(str(arranged[0]),"\n","+",str(arranged[1]),"\n",linha," ")
+		x=arranged[2]
+		arranged[2]= x.rjust(8,padding)
 		
-	list= (lista.rstrip()).split("")
-	return list
+		y=arranged[0]
+		arranged[0]= y.rjust(9,padding)
+		
+		for i in range (1):
+			linhas+=('{:'+'-'+'>'+str(9)+'}').format('')+"  "
+			
+		numeradores+=str(arranged[0])+"  "
+		bases+=arranged[1]+arranged[2]+"  "
+		
+	return numeradores.rstrip()+"\n"+bases+"\n"+linhas
 	
