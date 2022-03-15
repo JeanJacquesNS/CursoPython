@@ -1,4 +1,4 @@
-def arithmetic_arranger (problems, calculate):
+def arithmetic_arranger (problems, calculate=False):
 	numeradores=' '
 	bases=' '
 	linhas=' '
